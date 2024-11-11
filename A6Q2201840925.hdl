@@ -9,28 +9,28 @@ CHIP A6Q2201840925{
         Not(in=d, out=notd);
 
         And(a=nota, b=notb, out=notaandnotb);
-        And(a=notaandnotb, b=notc, out=term1_part1);
-        And(a=term1_part1, b=notd, out=term1);
+        And(a=notaandnotb, b=notc, out=part1);
+        And(a=part1, b=notd, out=term1);
 
         And(a=nota, b=notb, out=notaandnotb2);
-        And(a=notaandnotb2, b=c, out=term2_part1);
-        And(a=term2_part1, b=notd, out=term2);
+        And(a=notaandnotb2, b=c, out=part2);
+        And(a=part2, b=notd, out=term2);
 
         And(a=nota, b=b, out=notaandb);
-        And(a=notaandb, b=notc, out=term3_part1);
-        And(a=term3_part1, b=d, out=term3);    
+        And(a=notaandb, b=notc, out=part3);
+        And(a=part3, b=d, out=term3);    
 
         And(a=nota, b=b, out=notaandb2);
-        And(a=notaandb2, b=c, out=term4_part1);
-        And(a=term4_part1, b=notd, out=term4);
+        And(a=notaandb2, b=c, out=part4);
+        And(a=part4, b=notd, out=term4);
 
         And(a=a, b=notb, out=aandnotb);
-        And(a=aandnotb, b=c, out=term5_part1);
-        And(a=term5_part1, b=d, out=term5);
+        And(a=aandnotb, b=c, out=part5);
+        And(a=part5, b=d, out=term5);
 
         And(a=a, b=b, out=aandb);
-        And(a=aandb, b=notc, out=term6_part1);
-        And(a=term6_part1, b=notd, out=term6);
+        And(a=aandb, b=notc, out=part6);
+        And(a=part6, b=notd, out=term6);
 
         Or(a=term1, b=term2, out=or1);
         Or(a=term3, b=term4, out=or2);
