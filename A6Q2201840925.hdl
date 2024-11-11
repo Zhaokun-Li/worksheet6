@@ -5,10 +5,10 @@ CHIP A6Q2201840925{
     PARTS:
         Not(in=a, out=nota);
         Not(in=b, out=notb);
-        Not(in=c, out=notc);
-        Not(in=d, out=notd);
+
 
         And(a=nota, b=notb, out=notaandnotb);
+        Not(in=d, out=notd);
         And(a=notaandnotb, b=notd, out=notaandnotbandnotd);
 
         And(a=nota, b=b, out=notaandb);
@@ -22,6 +22,7 @@ CHIP A6Q2201840925{
         And(a=aandnotb, b=candd, out=aandnotbandcandd);
 
         And(a=a, b=b, out=aandb);
+        Not(in=c, out=notc);
         And(a=notc, b=notd, out=notcandnotd);
         And(a=aandb, b=notcandnotd, out=aandbandnotcandnotd);
 
