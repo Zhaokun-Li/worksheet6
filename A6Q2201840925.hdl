@@ -25,7 +25,7 @@ CHIP A6Q2201840925{
         And(a=notc, b=notd, out=notcandnotd);
         And(a=aandb, b=notcandnotd, out=aandbandnotcandnotd);
 
-        Or(a=aandnotbandcandd, b=aandbandnotcandnotd, out=or2);'
+        Or(a=aandnotbandcandd, b=aandbandnotcandnotd, out=or2);
 
         Or(a=or1, b=or2, out=f);
 }
