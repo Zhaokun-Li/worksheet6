@@ -1,6 +1,6 @@
 CHIP A6Q2201840925{
     IN a,b,c,d;
-    OUT f ;
+    OUT f;
 
     PARTS:
         Not(in=a, out=nota);
@@ -12,8 +12,10 @@ CHIP A6Q2201840925{
         And(a=notaandnotb, b=notd, out=and1);
 
         And(a=nota, b=b, out=notaandb);
-        Xor(a=c, b=d, out=xor1);
-        And(a=notaandb, b=xor1, out=and2);
+        And(a=notc, b=d, out=notcandd);
+        And(a=c, b=notd, out=candnotd);
+        Or(a=notcandd, b=candnotd, out=orx);
+        And(a=notaandb, b=orx, out=and2);
 
         And(a=a, b=notb, out=aandnotb);
         And(a=aandnotb, b=c, out=aandnotbandc);
