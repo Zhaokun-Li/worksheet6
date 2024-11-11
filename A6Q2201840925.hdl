@@ -12,7 +12,7 @@ CHIP A6Q2201840925{
 
         And(a=nota, b=b, out=notaandb);
         And(a=notaandb, b=c, out=notaandbandc);
-        And(a=notaandb, b=notaandbandc, out=and2);
+        And(a=notaandbandc, b=notd, out=and2);
 
         And(a=a, b=notb, out=aandnotb);
         And(a=aandnotb, b=c, out=aandnotbandc);
