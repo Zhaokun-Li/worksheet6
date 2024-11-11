@@ -11,6 +11,9 @@ CHIP A6Q2201840925{
         And(a=nota, b=notb, out=notaandnotb);
         And(a=notaandnotb, b=notd, out=and1);
 
+        And(a=nota, b=notb, out=notaandnotb);
+        And(a=notaandnotb, b=c, out=and5);
+
         And(a=nota, b=b, out=notaandb);
         And(a=notaandb, b=c, out=notaandbandc);
         And(a=notaandbandc, b=notd, out=and2);
@@ -24,6 +27,7 @@ CHIP A6Q2201840925{
         And(a=aandnotbandc, b=d, out=and4);
 
         Or(a=and1, b=and2, out=or1);
-        Or(a=and3, b=and4, out=or2);
-        Or(a=or1, b=or2, out=f);
+        Or(a=or1, b=and3, out=or2);
+        Or(a=or2, b=and4, out=or3);
+        Or(a=or3, b=and5, out=f);
 }
